@@ -341,29 +341,7 @@ header {
             </div>
         </div>
     </section>
-  <pre><code>
-    from openai import OpenAI
-    client = OpenAI()
-
-    response = client.chat.completions.create(
-      model="gpt-3.5-turbo",
-      messages=[
-        {
-          "role": "system",
-          "content": "You are capable of solving sums in maths and you can explain questions very easily."
-        },
-        {
-          "role": "user",
-          "content": ""
-        }
-      ],
-      temperature=1,
-      max_tokens=256,
-      top_p=1,
-      frequency_penalty=0,
-      presence_penalty=0
-    )
-  </code></pre>
+  
 
     <section id="gallery" class="gallery">
         <div class="container">
