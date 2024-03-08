@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arlo- Maths with AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<style>
+    /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #999;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #000;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.welcome-interface {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.welcome-interface h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.welcome-interface p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.welcome-interface img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Feature Section Styles */
+.features {
+    padding: 100px 0;
+    background-color: #000;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.feature img {
+    width: 200px;
+    margin-right: 40px;
+    border-radius: 5px;
+}
+
+.feature h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 18px;
+}
+
+/* Use Cases Section Styles */
+.use-cases {
+    padding: 100px 0;
+    background-color: #000;
+}
+
+.use-cases h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.use-case {
+    margin-bottom: 40px;
+}
+
+.use-case h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.use-case p {
+    font-size: 18px;
+}
+
+/* Capabilities Section Styles */
+.capabilities {
+    padding: 100px 0;
+    background-color: #000;
+}
+
+.capabilities h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.capabilities-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.capability {
+    flex: 1;
+    padding: 30px;
+    background-color: #111;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.capability h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.capability p {
+    font-size: 18px;
+}
+
+/* Gallery Section Styles */
+.gallery {
+    padding: 100px 0;
+    background-color: #000;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ .code-container {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 80%;
+      overflow-x: auto;
+    }
+    pre {
+      margin: 0;
+    }
+
+ .pricing-container {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+      max-width: 80%;
+    }
+    .pricing-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .pricing-item:last-child {
+      border-bottom: none;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="https://images.sftcdn.net/images/t_app-icon-m/p/0298e352-9ed9-4d38-a980-085c8e09a9b2/3022654843/dall-e-dall-e-2-dalle-open-logo" alt="DALL-E Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#signin">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="welcome-interface">
+                <h1>Arlo</h1>
+                <p>A creative AI for Math's Solution</p>
+                <img src="https://api.time.com/wp-content/uploads/2022/11/best-inventions-2022-OpenAI-DALL-E-2.jpg" alt="Welcome Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+          <h4> Please note that Alro is currently using Openai Model. We would soon release our own website</h4> 
+         
+            <h2>Features</h2>
+            <div class="feature">
+                <img src="1.png" alt="Feature 1 Image">
+                <h3>Problems Explained</h3>
+                <p>Arlo can generate high-quality answers from textual descriptions, and numerical equations opening up new possibilities for
+                    visual storytelling and creative expression.</p>
+            </div>
+            <div class="feature">
+                <img src="2.png" alt="Feature 2 Image">
+                <h3>Customization Options</h3>
+                <p>With Arlo, you can customize various aspects of the generated answers of different topics and give accurate explanation</p>
+            </div>
+            <div class="feature">
+                <img src="3.png" alt="Feature 3 Image">
+                <h3>Integration</h3>
+                <p>Arlo seamlessly integrates with your existing workflows and applications, making it easy to
+                    incorporate AI-generated answers into your projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+          <h3> authors: Archit kumar</h3>
+            <h2>Use Cases</h2>
+            <div class="use-case">
+                <h3>Homework</h3>
+                <p>Mostly our product or code is used by students and most of them used it in their "Homework" and we recieved very positive feedback with it. </p>
+            </div>
+            <div class="use-case">
+                <h3>Education</h3>
+                <p>Alro can be used by tutors to expalin sums to students and can be very helpful in a student education journey.</p>
+            </div>
+            <div class="use-case">
+                <h3>E-commerce</h3>
+                <p>E-commerce platforms can utilize Arlo by estimating profits and accounts too! </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <h2>Capabilities</h2>
+            <div class="capabilities-list">
+                <div class="capability">
+                    <h3>Text-to-Answer Generation</h3>
+                    <p>Alro can tailor lessons to individual learning styles and abilities, providing personalized instruction and feedback.</p>
+                </div>
+                <div class="capability">
+                    <h3>Conditional answers Generation</h3>
+                    <p> It adapts its teaching approach based on the user's progress and areas of difficulty, ensuring an optimal learning experience. </p>
+                </div>
+                <div class="capability">
+                    <h3>High Resolution Output</h3>
+                    <p>Arlo is capable of producing answers and fine details, suitable for
+                        professional use in various industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  <pre><code>
+    from openai import OpenAI
+    client = OpenAI()
+
+    response = client.chat.completions.create(
+      model="gpt-3.5-turbo",
+      messages=[
+        {
+          "role": "system",
+          "content": "You are capable of solving sums in maths and you can explain questions very easily."
+        },
+        {
+          "role": "user",
+          "content": ""
+        }
+      ],
+      temperature=1,
+      max_tokens=256,
+      top_p=1,
+      frequency_penalty=0,
+      presence_penalty=0
+    )
+  </code></pre>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            
+                </div>
+              
+              <h2>Pricing</h2>
+      <div class="pricing-item">
+        <h3>Basic Plan</h3>
+        <p>$10/month</p>
+        <ul>
+          <li>Access to basic features</li>
+          <li>Limited usage</li>
+        </ul>
+      </div>
+      <div class="pricing-item">
+        <h3>Pro Plan</h3>
+        <p>$20/month</p>
+        <ul>
+          <li>Access to advanced features</li>
+          <li>Increased usage limits</li>
+        </ul>
+      </div>
+      <div class="pricing-item">
+        <h3>Enterprise Plan</h3>
+        <p>Contact us for pricing</p>
+        <ul>
+          <li>Custom solutions</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+                <!-- More images can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Other sections can be added here -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alro. All rights reserved. Arc's</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
