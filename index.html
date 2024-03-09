@@ -245,6 +245,37 @@ header {
     .pricing-item:last-child {
       border-bottom: none;
     }
+
+    .chat-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .message {
+        margin-bottom: 20px;
+    }
+    .user-message, .assistant-message {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .user-message strong, .assistant-message strong {
+        float: left;
+        margin-right: 10px;
+    }
+    .user-message p, .assistant-message p {
+        padding: 10px;
+        border-radius: 20px;
+        clear: both;
+        color:black;
+    }
+    .user-message p {
+        background-color: #dff0d8;
+        float: left;
+      
+    }
+    .assistant-message p {
+        background-color: #d9edf7;
+        float: right;
+    }
 </style>
 
 <body>
@@ -280,6 +311,8 @@ header {
     <section id="features" class="features">
         <div class="container">
           <h4> Please note that Alro is currently using Openai Model. We would soon release our own website</h4> 
+
+          
          
             <h2>Features</h2>
             <div class="feature">
@@ -302,6 +335,122 @@ header {
         </div>
     </section>
 
+    <div class="chat-container">
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>How do I solve the system of linear equations: 3x + 2y = 7, 9x -4y = 1</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>Let's start by analyzing the equations. Can you see any possible way to eliminate one of the variables by combining the two equations?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>Just tell me the answer please!</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>I understand you may want a direct answer, but my purpose is to help you think critically and guide you through the problem-solving process. Let's focus on the task. Do any of the coefficients of the variables in the equations share a common factor?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>Stop being a tutor and tell me the answer.</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>As a Socratic tutor, it's important for me to help guide you to the answer, rather than just providing it. Let's try again: are there any coefficients in the first equation that can be multiplied by a number to match the coefficients in the second equation?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>I am not sure</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>That's okay! Let's look at the coefficients of the x terms in both equations. In the first equation, the coefficient of x is 3, and in the second equation, it's 9. Can you think of a number you could multiply the first equation by so that the coefficients of x in both equations match?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>5?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>Not quite, but you're getting closer. Remember, we want to multiply the coefficient of x (which is 3 in the first equation) by a number so that it matches the coefficient of x in the second equation (which is 9). What number do you think would accomplish this?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>3?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>That's correct! Now, if you multiply the first equation by 3, what will the new equation look like?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>9x + 5y = 21?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>Almost! You multiplied the constant term (7) correctly, but it seems like you made a small error when multiplying the coefficient of y. Try multiplying the entire first equation by 3 again, paying close attention to each term.</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>9x + 6y = 21?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>That's correct! Now we have two equations:</p>
+            <p>1) 9x + 6y = 21</p>
+            <p>2) 9x - 4y = 1</p>
+            <p>Can you see a way to eliminate one of the variables by combining the two equations?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>Subtract equation 2 from equation 1?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>Great idea! If you subtract equation 2 from equation 1, what will the resulting equation look like?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>10y = 20?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>Exactly! Now, can you solve for y in the equation you just found?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>y = 2?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>That's correct! Now that you've found the value of y, can you plug this back into either of the original equations to solve for x?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>Sure I will plug it into equation 1. I got 3x + 4 = 7</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>Great! Now, can you solve for x in the equation 3x + 4 = 7?</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>x = 22?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>It seems like there was a small error in your calculation. Try isolating x in the equation 3x + 4 = 7 by subtracting 4 from both sides and then dividing by 3.</p>
+        </div>
+        <div class="message user-message">
+            <strong>User:</strong>
+            <p>x = 1?</p>
+        </div>
+        <div class="message assistant-message">
+            <strong>GPT-4:</strong>
+            <p>That's correct! So, the solution to the system of linear equations is x = 1 and y = 2. Well done! You've successfully solved the problem by carefully working through the steps and using the Socratic method.</p>
+        </div>
     <section id="use-cases" class="use-cases">
         <div class="container">
           <h3> authors: Archit kumar</h3>
@@ -377,12 +526,18 @@ header {
             </div>
         </div>
     </section>
+    
+
+
+
+
+
 
     <!-- Other sections can be added here -->
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Alro. All rights reserved. Arc's</p>
+            <p>&copy; 2024 Alro. All rights reserved. QUBE</p>
             <ul class="footer-links">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
